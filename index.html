@@ -13,113 +13,162 @@
             background-color: #fff0f5;
         }
 
+        .hero-section {
+            background: linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%);
+            padding: 50px 0;
+            border-bottom: 5px solid #ff1493; /* إضافة حدود سفلية */
+        }
+
         .offer-card {
             transition: all 0.3s ease;
+            border-radius: 15px; /* زوايا دائرية */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل خفيف */
         }
 
         .offer-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* ظل أعمق عند التمرير */
         }
 
         .pink-btn {
             background-color: #ff69b4;
             color: white;
+            border-radius: 25px; /* زوايا دائرية للأزرار */
+            padding: 10px 20px; /* حشوة أكبر */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         .pink-btn:hover {
             background-color: #ff1493;
         }
 
-        .hero-section {
-            background: linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%);
+        .section-title {
+            color: #ff69b4; /* لون العنوان */
+            border-bottom: 2px solid #ff1493; /* إضافة حدود سفلية */
+            padding-bottom: 10px; /* حشوة سفلية */
         }
 
-        @keyframes fade-in {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .service-description {
+            font-size: 1.1rem;
+            color: #555;
         }
 
-        .animate-fade-in {
-            animation: fade-in 0.6s ease-out forwards;
+        footer {
+            background-color: #ff69b4; /* لون الفوتر */
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header class="hero-section text-white py-8">
-        <div class="container mx-auto px-4 text-center">
+    <header class="hero-section text-white text-center">
+        <div class="container mx-auto px-4">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">مركز باربي التجميلي</h1>
-            <p class="text-xl md:text-2xl mb-8">جمالك هو شغفنا!</p>
-            <a href="#offers" class="pink-btn inline-block px-8 py-3 rounded-full font-bold text-lg">عروضنا المميزة</a>
+            <p class="text-xl md:text-2xl mb-8">جمالك هو هدفنا!</p>
+            <a href="#offers" class="pink-btn inline-block">عروضنا المميزة</a>
         </div>
     </header>
 
     <main class="py-12">
         <section id="offers" class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-rose-800">الخدمات المتاحة</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">الخدمات المتاحة</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <!-- Offer Cards -->
                 <!-- Offer 1 -->
-                <div class="offer-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="offer-card bg-white rounded-2xl overflow-hidden">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-2xl font-bold mr-4">1</div>
                             <h3 class="text-2xl font-bold text-rose-800">قص شعر</h3>
                         </div>
-                        <p class="text-lg text-gray-700 mb-4">احصل على قص شعر مميز مع أفضل مصففي الشعر.</p>
+                        <p class="service-description mb-4">احصلي على قصة شعر بطريقة احترافية مع أفضل مصففي الشعر.</p>
                         <div class="mb-4">
                             <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="قص شعر" class="w-full rounded-lg" />
                         </div>
-                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4 hover:bg-rose-700 transition duration-300 flex justify-center items-center">احجز الآن</a>
+                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4">احجز الآن</a>
                     </div>
                 </div>
                 <!-- Offer 2 -->
-                <div class="offer-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="offer-card bg-white rounded-2xl overflow-hidden">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-2xl font-bold mr-4">2</div>
                             <h3 class="text-2xl font-bold text-rose-800">صبغة شعر</h3>
                         </div>
-                        <p class="text-lg text-gray-700 mb-4">احصل على صبغة شعر بأحدث الألوان.</p>
+                        <p class="service-description mb-4">احصلي على صبغة شعر بأحدث الألوان.</p>
                         <div class="mb-4">
                             <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="صبغة شعر" class="w-full rounded-lg" />
                         </div>
-                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4 hover:bg-rose-700 transition duration-300 flex justify-center items-center">احجز الآن</a>
+                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4">احجز الآن</a>
                     </div>
                 </div>
                 <!-- Offer 3 -->
-                <div class="offer-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="offer-card bg-white rounded-2xl overflow-hidden">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-2xl font-bold mr-4">3</div>
                             <h3 class="text-2xl font-bold text-rose-800">كورس مكياج</h3>
                         </div>
-                        <p class="text-lg text-gray-700 mb-4">تعلم فنون المكياج مع أفضل المدربين.</p>
-                        <div class="mb-4">
-                            <img src="https://images.unsplash.com/photo-1600585154320-1c1c1c1c1c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="كورس مكياج" class="w-full rounded-lg" />
-                        </div>
-                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4 hover:bg-rose-700 transition duration-300 flex justify-center items-center">احجز الآن</a>
+                        <p class="service-description mb-4">تعليم المكياج بطريقة احترافية للفرد الواحد.</p>
+                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4">احجز الآن</a>
                     </div>
                 </div>
                 <!-- Offer 4 -->
-                <div class="offer-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="offer-card bg-white rounded-2xl overflow-hidden">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-2xl font-bold mr-4">4</div>
                             <h3 class="text-2xl font-bold text-rose-800">تنظيف بشرة</h3>
                         </div>
-                        <p class="text-lg text-gray-700 mb-4">احصل على تنظيف بشرة عميق مع أفضل المنتجات.</p>
-                        <div class="mb-4">
-                            <img src="https://images.unsplash.com/photo-1593642631925-8f785b8c3c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="تنظيف بشرة" class="w-full rounded-lg" />
+                        <p class="service-description mb-4">احصلي على تنظيف بشرة عميق مع أفضل المنتجات وأحدث الأجهزة.</p>
+                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4">احجز الآن</a>
+                    </div>
+                </div>
+                <!-- Offer 5 -->
+                <div class="offer-card bg-white rounded-2xl overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-2xl font-bold mr-4">5</div>
+                            <h3 class="text-2xl font-bold text-rose-800">معالجة الشعر</h3>
                         </div>
-                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4 hover:bg-rose-700 transition duration-300 flex justify-center items-center">احجز الآن</a>
+                        <p class="service-description mb-4">معالجة للشعر بأحدث التقنيات (Fiber Hance).</p>
+                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4">احجز الآن</a>
+                    </div>
+                </div>
+                <!-- Offer 6 -->
+                <div class="offer-card bg-white rounded-2xl overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-2xl font-bold mr-4">6</div>
+                            <h3 class="text-2xl font-bold text-rose-800">مجموعة العناية بالشعر والبشرة</h3>
+                        </div>
+                        <p class="service-description mb-4">تم إعدادها بواسطة زيوت طبيعية.</p>
+                        <a href="tel:01068939832" class="pink-btn w-full py-2 rounded-lg mt-4">احجز الآن</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="container mx-auto px-4 py-8">
-            <h2 class="text-3xl font-bold text-center mb-6 text-rose-800">مواعيد العمل</h2>
+            <h2 class="text-3xl font-bold text-center mb-6 section-title">مواعيد العمل</h2>
             <p class="text-lg text-gray-700 text-center mb-4">يومياً من الساعة 2:00 ظهراً حتى 10:00 مساءً</p>
             <p class="text-lg text-gray-700 text-center mb-4">يوم الاثنين: إجازة</p>
             <p class="text-lg text-gray-700 text-center">يوم الجمعة: من الساعة 5:00 مساءً حتى 10:00 مساءً</p>
@@ -160,16 +209,19 @@
                 <div class="mb-6 md:mb-0">
                     <h3 class="text-2xl font-bold mb-2">باربي</h3>
                     <p class="mb-2">مركز التجميل الأول</p>
+                    <p>المحلة الكبرى، شكري القواتلي، أمام لطفي للأحذية</p>
+                    <p>ليس لنا فروع أخرى</p>
                     <p>جميع الحقوق محفوظة &copy; <script>document.write(new Date().getFullYear())</script></p>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-3">تواصل معنا</h4>
                     <div class="flex space-x-4">
                         <a href="https://wa.me/201068939832" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-green-500">
-                            <!-- أيقونة واتساب -->
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                         </a>
-                        <!-- المزيد من الروابط إذا احتجت -->
+                        <a href="https://wa.me/201068939832" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-green-500">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 9.99 9.99 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475 4.89 4.89 0 002.184 4.04 4.915 4.915 0 01-2.23-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105 9.8 9.8 0 01-1.162-.069 13.94 13.94 0 007.548 2.212c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.631a9.935 9.935 0 002.46-2.548l-.047-.02z"/></svg>
+                        </a>
                     </div>
                     <div class="mt-4 bg-white bg-opacity-20 rounded-lg p-3 text-center">
                         <p class="font-bold text-lg">للحجوزات والاستفسارات</p>
